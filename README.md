@@ -19,6 +19,11 @@ $ docker image ls
 Output:
 
 ```
-REPOSITORY              TAG       IMAGE ID       CREATED         SIZE
-go-docker-multi-stage   latest    7f017cd76204   4 minutes ago   1.89MB
+REPOSITORY                      TAG       IMAGE ID       CREATED          SIZE
+go-docker-without-multi-stage   latest    8f6b790e1cd1   17 minutes ago   852MB
+go-docker-multi-stage           latest    7f017cd76204   22 minutes ago   1.89MB
 ```
+
+# Observation
+
+The `go-docker-without-multi-stage` image does not utilize multi-stage builds. As you can observe, the `go-docker-multi-stage` variant is approximately 450 times lighter than the `go-docker-without-multi-stage` version, with the former weighing in at 1.89MB compared to the latter's 852MB.

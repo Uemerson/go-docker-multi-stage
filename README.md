@@ -20,8 +20,20 @@ Output:
 
 ```
 REPOSITORY                      TAG       IMAGE ID       CREATED          SIZE
-go-docker-without-multi-stage   latest    8f6b790e1cd1   17 minutes ago   852MB
-go-docker-multi-stage           latest    7f017cd76204   22 minutes ago   1.89MB
+go-docker-multi-stage           latest    4c42878ab6d2   9 seconds ago    1.89MB
+go-docker-without-multi-stage   latest    7ce5c380ce12   39 seconds ago   852MB
+```
+
+Run go-docker-multi-stage image:
+
+```
+$ docker run go-docker-multi-stage
+```
+
+Run go-docker-without-multi-stage image:
+
+```
+$ docker run go-docker-without-multi-stage
 ```
 
 # Observation

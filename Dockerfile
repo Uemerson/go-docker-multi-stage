@@ -3,7 +3,7 @@ FROM golang:1.22 as BUILD
 WORKDIR /app
 COPY . .
 
-RUN go build -o main ./cmd/multistage/main.go
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o main ./cmd/multistage/main.go
 
 FROM scratch
 
